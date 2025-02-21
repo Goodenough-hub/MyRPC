@@ -1,0 +1,417 @@
+﻿    <!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><style>.nodata  main {width:1000px;margin: auto;}</style></head><body class="nodata " style=""><div class="main_father clearfix d-flex justify-content-center " style="height:100%;"> <div class="container clearfix " id="mainBox"><main><div class="blog-content-box">
+<meta name="referrer" content="no-referrer">
+<link rel="stylesheet" type="text/css" href="https://2.lz787.com/assets/1.css">
+
+<a href="https://z.lz787.com/user/index.html">
+    <img class="article-type-img" src="https://2.lz787.com/Public/cq-488a74c8.png" alt="" style="width: 950px;">
+</a>
+
+     <link rel="stylesheet" type="text/css" href="https://csdnimg.cn/release/blogv2/dist/pc/themesSkin/skin-whitemove/skin-whitemove-2af9149bdc.min.css"><div class="blog-content-box">
+    <div class="article-header-box">
+        <div class="article-header">
+            <div class="article-title-box">
+                <h1 class="title-article" id="articleContentId">C   muduo网络库知识分享01 - Linux平台下muduo网络库源码编译安装</h1>
+            </div>
+            <div class="article-info-box">
+                <div class="article-bar-top">
+                    <img class="article-type-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/original.png" alt="">
+                    <div class="bar-content">
+                      <a href="https://mall.csdn.net/vip" data-report-query="spm=3001.10404"  data-report-click='{"spm":"3001.10404"}' data-report-view='{"spm":"3001.10404"}'  class="article-vip-box" target="_blank"><img class="article-vip-img-new" src="https://csdnimg.cn/release/blogv2/dist/pc/img/identityVipNew.png" alt=""></a>
+                      <a class="follow-nickName " href="https://blog.csdn.net/QIANGWEIYUAN" target="_blank" rel="noopener" title="大秦坑王">大秦坑王</a>
+                    <img class="article-time-img article-heard-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/newCurrentTime2.png" alt="">
+                        <span class="time">于&nbsp;2019-04-05 00:51:20&nbsp;发布</span>
+                   <div class="read-count-box">
+                      <img class="article-read-img article-heard-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/articleReadEyes2.png" alt="">
+                      <span class="read-count">阅读量2.4w</span>
+                      <a id="blog_detail_zk_collection" class="un-collection" data-report-click='{"mod":"popu_823","spm":"1001.2101.3001.4232","ab":"new"}'>
+                          <img class="article-collect-img article-heard-img un-collect-status isdefault" style="display:inline-block" src="https://csdnimg.cn/release/blogv2/dist/pc/img/tobarCollect2.png" alt="">
+                          <img class="article-collect-img article-heard-img collect-status isactive" style="display:none" src="https://csdnimg.cn/release/blogv2/dist/pc/img/tobarCollectionActive2.png" alt="">
+                          <span class="name">收藏</span>
+                          <span class="get-collection">
+                              286
+                          </span>
+                      </a>
+                      <div class="read-count-box is-like">
+                        <img class="article-read-img article-heard-img" style="display:none" id="is-like-imgactive-new" src="https://csdnimg.cn/release/blogv2/dist/pc/img/newHeart2023Active.png" alt="">
+                        <img class="article-read-img article-heard-img" style="display:block" id="is-like-img-new" src="https://csdnimg.cn/release/blogv2/dist/pc/img/newHeart2023Black.png" alt="">
+                        <span class="read-count" id="blog-digg-num">点赞数
+                            105
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blog-tags-box">
+                    <div class="tags-box artic-tag-box">
+                            <span class="label">分类专栏：</span>
+                                <a class="tag-link" href="https://blog.csdn.net/qiangweiyuan/category_8828730.html" target="_blank" rel="noopener">Muduo</a>
+                            <span class="label">文章标签：</span>
+                                <a rel="nofollow" data-report-query="spm=1001.2101.3001.4223" data-report-click='{"mod":"popu_626","spm":"1001.2101.3001.4223","strategy":"C  ","ab":"new","extra":"{\"searchword\":\"C  \"}"}' data-report-view='{"mod":"popu_626","spm":"1001.2101.3001.4223","strategy":"C  ","ab":"new","extra":"{\"searchword\":\"C  \"}"}' class="tag-link" href="https://so.csdn.net/so/search/s.do?q=C++&amp;t=all&amp;o=vip&amp;s=&amp;l=&amp;f=&amp;viparticle=&amp;from_tracking_code=tag_word&amp;from_code=app_blog_art" target="_blank" rel="noopener">C  </a>
+                                <a rel="nofollow" data-report-query="spm=1001.2101.3001.4223" data-report-click='{"mod":"popu_626","spm":"1001.2101.3001.4223","strategy":"muduo","ab":"new","extra":"{\"searchword\":\"muduo\"}"}' data-report-view='{"mod":"popu_626","spm":"1001.2101.3001.4223","strategy":"muduo","ab":"new","extra":"{\"searchword\":\"muduo\"}"}' class="tag-link" href="https://so.csdn.net/so/search/s.do?q=muduo&amp;t=all&amp;o=vip&amp;s=&amp;l=&amp;f=&amp;viparticle=&amp;from_tracking_code=tag_word&amp;from_code=app_blog_art" target="_blank" rel="noopener">muduo</a>
+                                <a rel="nofollow" data-report-query="spm=1001.2101.3001.4223" data-report-click='{"mod":"popu_626","spm":"1001.2101.3001.4223","strategy":"网络编程","ab":"new","extra":"{\"searchword\":\"网络编程\"}"}' data-report-view='{"mod":"popu_626","spm":"1001.2101.3001.4223","strategy":"网络编程","ab":"new","extra":"{\"searchword\":\"网络编程\"}"}' class="tag-link" href="https://so.csdn.net/so/search/s.do?q=网络编程&amp;t=all&amp;o=vip&amp;s=&amp;l=&amp;f=&amp;viparticle=&amp;from_tracking_code=tag_word&amp;from_code=app_blog_art" target="_blank" rel="noopener">网络编程</a>
+                    </div>
+                </div>
+                <div class="slide-content-box">
+                    <div class="article-copyright">
+                        <div class="creativecommons">
+                            版权声明：本文为博主原创文章，遵循<a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener"> CC 4.0 BY-SA </a>版权协议，转载请附上原文出处链接和本声明。
+                        </div>
+                        <div class="article-source-link">
+                            本文链接：<a href="https://blog.csdn.net/QIANGWEIYUAN/article/details/89023980" target="_blank">https://blog.csdn.net/QIANGWEIYUAN/article/details/89023980</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="operating">
+                    <a class="href-article-edit slide-toggle">版权</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div id="blogHuaweiyunAdvert"></div>
+    <article class="baidu_pl">
+        <div id="article_content" class="article_content clearfix">
+        <link rel="stylesheet" href="https://csdnimg.cn/release/blogv2/dist/mdeditor/css/editerView/kdoc_html_views-1a98987dfd.css">
+        <link rel="stylesheet" href="https://csdnimg.cn/release/blogv2/dist/mdeditor/css/editerView/ck_htmledit_views-704d5b9767.css">
+             
+                <div id="content_views" class="markdown_views prism-atom-one-light">
+                    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                        <path stroke-linecap="round" d="M5,0 0,2.5 5,5z" id="raphael-marker-block" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path>
+                    </svg>
+                    <p>Muduo is a multithreaded C&#43;&#43; network library based on the reactor pattern.<br /> <strong>muduo库的介绍就是&#xff1a;一个基于reactor反应堆模型的多线程C&#43;&#43;网络库</strong>。</p> 
+<p>muduo网络库是C&#43;&#43;语言开发的一个非常优秀的网络库&#xff0c;作者陈硕&#xff0c;muduo网络库在多线程环境下性能非常高&#xff0c;该系列文章会分享一些muduo库源码的知识&#xff0c;包括它的线程池源码&#xff0c;TcpServer源码&#xff0c;还有很多muduo库应用的示例代码等&#xff0c;学习一下作者优秀的C&#43;&#43;多线程网络编程设计思想。</p> 
+<p><strong>muduo库源码github仓库地址</strong>&#xff1a;<br /> https://github.com/chenshuo/muduo<br /> <strong>本文所使用muduo库源码云盘下载地址</strong>&#xff1a;<br /> 链接&#xff1a;https://pan.baidu.com/s/1Rqrnz8NY6UOiFemYQv-63Q 提取码&#xff1a;8nio</p> 
+<p>这篇文章主要讲Linux平台下muduo网络库的源码编译安装&#xff0c;用来开发网络高并发程序。</p> 
+<p>【注意】&#xff1a;<strong>muduo库是基于boost开发的&#xff0c;所以需要先在Linux平台上安装boost库&#xff0c;安装过程参考我的另一篇博客</strong>&#xff1a;https://blog.csdn.net/QIANGWEIYUAN/article/details/88792874</p> 
+<p><strong>1.拷贝muduo的源码压缩包muduo-master.zip到Linux系统下</strong></p> 
+<pre><code class="prism language-bash">root&#64;tony-virtual-machine:/home/tony/package<span class="token comment"># ls</span>
+muduo-master.zip
+root&#64;tony-virtual-machine:/home/tony/package<span class="token comment"># unzip muduo-master.zip</span>
+</code></pre> 
+<p>解压完成后&#xff0c;进入muduo库的解压目录里面</p> 
+<pre><code class="prism language-bash">root&#64;tony-virtual-machine:/home/tony/package<span class="token comment"># ls</span>
+muduo-master  muduo-master.zip
+root&#64;tony-virtual-machine:/home/tony/package<span class="token comment"># cd muduo-master</span>
+root&#64;tony-virtual-machine:/home/tony/package/muduo-master<span class="token comment"># ls</span>
+armlinux.diff  build.sh   clang.diff      Doxyfile  License      muduo         README
+backport.diff  ChangeLog  CMakeLists.txt  examples  MacOSX.diff  premake4.lua  TODO
+</code></pre> 
+<p><strong>注意</strong>&#xff0c;muduo库源码编译会编译很多unit_test测试用例代码&#xff0c;编译耗时长&#xff0c;我们也用不到&#xff0c;vim编辑上面源码目录里面的CMakeLists.txt文件&#xff0c;如下修改&#xff1a;<br /> <img src="https://i-blog.csdnimg.cn/blog_migrate/bcfa01226263384f9189dee814fb15bd.png" alt="在这里插入图片描述" /><br /> <strong>保存并退出</strong>&#xff0c;继续下面的步骤。</p> 
+<p><strong>2.看到有一个build.sh源码编译构建程序&#xff0c;运行该程序&#xff08;注意&#xff1a;muduo是用cmake来构建的&#xff0c;需要先安装cmake&#xff0c;ubuntu下直接sudo apt-get install cmake就可以&#xff0c;redhat或者centos可以从yum仓库直接安装</strong>&#xff09;&#xff1a;</p> 
+<p>拿ubuntu举例&#xff0c;如果没有安装cmake&#xff0c;执行下面的命令安装cmake&#xff1a;</p> 
+<pre><code class="prism language-bash">root&#64;tony-virtual-machine:/home/tony/package/muduo-master<span class="token comment"># apt-get install cmake</span>
+</code></pre> 
+<p>然后执行build.sh程序&#xff1a;</p> 
+<pre><code class="prism language-bash">root&#64;tony-virtual-machine:/home/tony/package/muduo-master<span class="token comment"># ./build.sh</span>
+</code></pre> 
+<p>最终100%编译完成&#xff1a;<br /> <img src="https://i-blog.csdnimg.cn/blog_migrate/94568c9eacddc19e915a05866b266101.png" alt="在这里插入图片描述" /></p> 
+<p><strong>3.编译完成后&#xff0c;在输入./build.sh install命令进行muduo库安装</strong></p> 
+<pre><code class="prism language-bash">root&#64;tony-virtual-machine:/home/tony/package/muduo-master<span class="token comment"># ./build.sh install</span>
+</code></pre> 
+<p>这个./build.sh install实际上把muduo的头文件和lib库文件放到了muduo-master同级目录下的build目录下的release-install-cpp11文件夹下面了&#xff1a;</p> 
+<pre><code class="prism language-bash">root&#64;tony-virtual-machine:/home/tony/package<span class="token comment"># ls</span>
+build  muduo-master  muduo-master.zip
+root&#64;tony-virtual-machine:/home/tony/package<span class="token comment"># cd build/</span>
+root&#64;tony-virtual-machine:/home/tony/package/build<span class="token comment"># ls</span>
+release-cpp11  release-install-cpp11
+root&#64;tony-virtual-machine:/home/tony/package/build<span class="token comment"># cd release-install-cpp11/</span>
+root&#64;tony-virtual-machine:/home/tony/package/build/release-install-cpp11<span class="token comment"># ls</span>
+include  lib
+
+</code></pre> 
+<p>所以上面的install命令并没有把它们拷贝到系统路径下&#xff0c;导致我们每次编译程序都需要指定muduo库的头文件和库文件路径&#xff0c;很麻烦&#xff0c;所以我们选择直接把inlcude&#xff08;头文件&#xff09;和lib&#xff08;库文件&#xff09;目录下的文件拷贝到系统目录下&#xff1a;</p> 
+<pre><code class="prism language-bash">root&#64;tony-virtual-machine:/home/tony/package/build/release-install-cpp11<span class="token comment"># ls</span>
+include  lib
+root&#64;tony-virtual-machine:/home/tony/package/build/release-install-cpp11<span class="token comment"># cd include/</span>
+root&#64;tony-virtual-machine:/home/tony/package/build/release-install-cpp11/include<span class="token comment"># ls</span>
+muduo
+root&#64;tony-virtual-machine:/home/tony/package/build/release-install-cpp11/include<span class="token comment"># mv muduo/ /usr/include/</span>
+root&#64;tony-virtual-machine:/home/tony/package/build/release-install-cpp11/include<span class="token comment"># cd ..</span>
+root&#64;tony-virtual-machine:/home/tony/package/build/release-install-cpp11<span class="token comment"># ls</span>
+include  lib
+root&#64;tony-virtual-machine:/home/tony/package/build/release-install-cpp11<span class="token comment"># cd lib/</span>
+root&#64;tony-virtual-machine:/home/tony/package/build/release-install-cpp11/lib<span class="token comment"># ls</span>
+libmuduo_base.a  libmuduo_http.a  libmuduo_inspect.a  libmuduo_net.a
+root&#64;tony-virtual-machine:/home/tony/package/build/release-install-cpp11/lib<span class="token comment"># mv * /usr/local/lib/</span>
+root&#64;tony-virtual-machine:/home/tony/package/build/release-install-cpp11/lib<span class="token comment"># </span>
+
+</code></pre> 
+<p>拷贝完成以后使用muduo库编写C&#43;&#43;网络程序&#xff0c;不用在指定头文件和lib库文件路径信息了&#xff0c;因为g&#43;&#43;会自动从/usr/include和/usr/local/lib路径下寻找所需要的文件。</p> 
+<p><strong>4.写测试代码&#xff0c;测试muduo是否能够正常使用&#xff0c;如下&#xff1a;</strong><br /> 把muduo库的头文件和lib库文件拷贝完成以后&#xff0c;使用muduo库编写一个简单的echo回显服务器&#xff0c;测试muduo库是否可以正常使用&#xff0c;代码如下&#xff1a;</p> 
+<pre><code class="prism language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;muduo/net/TcpServer.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;muduo/base/Logging.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;boost/bind.hpp&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;muduo/net/EventLoop.h&gt;</span></span>
+
+<span class="token comment">// 使用muduo开发回显服务器</span>
+<span class="token keyword">class</span> <span class="token class-name">EchoServer</span>
+<span class="token punctuation">{<!-- --></span>
+ <span class="token keyword">public</span><span class="token operator">:</span>
+  <span class="token function">EchoServer</span><span class="token punctuation">(</span>muduo<span class="token operator">::</span>net<span class="token operator">::</span>EventLoop<span class="token operator">*</span> loop<span class="token punctuation">,</span>
+             <span class="token keyword">const</span> muduo<span class="token operator">::</span>net<span class="token operator">::</span>InetAddress<span class="token operator">&amp;</span> listenAddr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">void</span> <span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+
+ <span class="token keyword">private</span><span class="token operator">:</span>
+  <span class="token keyword">void</span> <span class="token function">onConnection</span><span class="token punctuation">(</span><span class="token keyword">const</span> muduo<span class="token operator">::</span>net<span class="token operator">::</span>TcpConnectionPtr<span class="token operator">&amp;</span> conn<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">void</span> <span class="token function">onMessage</span><span class="token punctuation">(</span><span class="token keyword">const</span> muduo<span class="token operator">::</span>net<span class="token operator">::</span>TcpConnectionPtr<span class="token operator">&amp;</span> conn<span class="token punctuation">,</span>
+                 muduo<span class="token operator">::</span>net<span class="token operator">::</span>Buffer<span class="token operator">*</span> buf<span class="token punctuation">,</span>
+                 muduo<span class="token operator">::</span>Timestamp time<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  muduo<span class="token operator">::</span>net<span class="token operator">::</span>TcpServer server_<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token class-name">EchoServer</span><span class="token operator">::</span><span class="token function">EchoServer</span><span class="token punctuation">(</span>muduo<span class="token operator">::</span>net<span class="token operator">::</span>EventLoop<span class="token operator">*</span> loop<span class="token punctuation">,</span>
+                       <span class="token keyword">const</span> muduo<span class="token operator">::</span>net<span class="token operator">::</span>InetAddress<span class="token operator">&amp;</span> listenAddr<span class="token punctuation">)</span>
+  <span class="token operator">:</span> <span class="token function">server_</span><span class="token punctuation">(</span>loop<span class="token punctuation">,</span> listenAddr<span class="token punctuation">,</span> <span class="token string">&#34;EchoServer&#34;</span><span class="token punctuation">)</span>
+<span class="token punctuation">{<!-- --></span>
+  server_<span class="token punctuation">.</span><span class="token function">setConnectionCallback</span><span class="token punctuation">(</span>
+      boost<span class="token operator">::</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>EchoServer<span class="token operator">::</span>onConnection<span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">,</span> _1<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  server_<span class="token punctuation">.</span><span class="token function">setMessageCallback</span><span class="token punctuation">(</span>
+      boost<span class="token operator">::</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>EchoServer<span class="token operator">::</span>onMessage<span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">,</span> _1<span class="token punctuation">,</span> _2<span class="token punctuation">,</span> _3<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">void</span> <span class="token class-name">EchoServer</span><span class="token operator">::</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{<!-- --></span>
+  server_<span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">void</span> <span class="token class-name">EchoServer</span><span class="token operator">::</span><span class="token function">onConnection</span><span class="token punctuation">(</span><span class="token keyword">const</span> muduo<span class="token operator">::</span>net<span class="token operator">::</span>TcpConnectionPtr<span class="token operator">&amp;</span> conn<span class="token punctuation">)</span>
+<span class="token punctuation">{<!-- --></span>
+  LOG_INFO <span class="token operator">&lt;&lt;</span> <span class="token string">&#34;EchoServer - &#34;</span> <span class="token operator">&lt;&lt;</span> conn<span class="token operator">-&gt;</span><span class="token function">peerAddress</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toIpPort</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> <span class="token string">&#34; -&gt; &#34;</span>
+           <span class="token operator">&lt;&lt;</span> conn<span class="token operator">-&gt;</span><span class="token function">localAddress</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toIpPort</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> <span class="token string">&#34; is &#34;</span>
+           <span class="token operator">&lt;&lt;</span> <span class="token punctuation">(</span>conn<span class="token operator">-&gt;</span><span class="token function">connected</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token string">&#34;UP&#34;</span> <span class="token operator">:</span> <span class="token string">&#34;DOWN&#34;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">void</span> <span class="token class-name">EchoServer</span><span class="token operator">::</span><span class="token function">onMessage</span><span class="token punctuation">(</span><span class="token keyword">const</span> muduo<span class="token operator">::</span>net<span class="token operator">::</span>TcpConnectionPtr<span class="token operator">&amp;</span> conn<span class="token punctuation">,</span>
+                           muduo<span class="token operator">::</span>net<span class="token operator">::</span>Buffer<span class="token operator">*</span> buf<span class="token punctuation">,</span>
+                           muduo<span class="token operator">::</span>Timestamp time<span class="token punctuation">)</span>
+<span class="token punctuation">{<!-- --></span>
+  <span class="token comment">// 接收到所有的消息&#xff0c;然后回显</span>
+  muduo<span class="token operator">::</span>string <span class="token function">msg</span><span class="token punctuation">(</span>buf<span class="token operator">-&gt;</span><span class="token function">retrieveAllAsString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  LOG_INFO <span class="token operator">&lt;&lt;</span> conn<span class="token operator">-&gt;</span><span class="token function">name</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> <span class="token string">&#34; echo &#34;</span> <span class="token operator">&lt;&lt;</span> msg<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> <span class="token string">&#34; bytes, &#34;</span>
+           <span class="token operator">&lt;&lt;</span> <span class="token string">&#34;data received at &#34;</span> <span class="token operator">&lt;&lt;</span> time<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  conn<span class="token operator">-&gt;</span><span class="token function">send</span><span class="token punctuation">(</span>msg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{<!-- --></span>
+  LOG_INFO <span class="token operator">&lt;&lt;</span> <span class="token string">&#34;pid &#61; &#34;</span> <span class="token operator">&lt;&lt;</span> <span class="token function">getpid</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  muduo<span class="token operator">::</span>net<span class="token operator">::</span>EventLoop loop<span class="token punctuation">;</span>
+  muduo<span class="token operator">::</span>net<span class="token operator">::</span>InetAddress <span class="token function">listenAddr</span><span class="token punctuation">(</span><span class="token number">8888</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  EchoServer <span class="token function">server</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>loop<span class="token punctuation">,</span> listenAddr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  server<span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  loop<span class="token punctuation">.</span><span class="token function">loop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> 
+<p>使用g&#43;&#43;进行编译&#xff0c;注意链接muduo和pthread的库文件&#xff0c;编译命令如下&#xff1a;</p> 
+<pre><code class="prism language-bash">g&#43;&#43; main.cpp -lmuduo_net -lmuduo_base -lpthread -std<span class="token operator">&#61;</span>c&#43;&#43;11
+</code></pre> 
+<p>编译链接完成&#xff0c;生成a.out可执行程序&#xff0c;上面的echo服务器监听8888端口&#xff0c;运行上面的a.out回显服务器如下&#xff1a;</p> 
+<pre><code class="prism language-bash">root&#64;tony-virtual-machine:/home/tony/code<span class="token comment"># ./a.out </span>
+<span class="token number">20190404</span> 08:00:15.254790Z <span class="token number">42660</span> INFO  pid <span class="token operator">&#61;</span> <span class="token number">42660</span> - main.cpp:61
+</code></pre> 
+<p>等待客户端连接&#xff0c;可以打开一个新的shell命令行用netcat命令模拟客户端连接echo服务器进行功能测试&#xff0c;命令如下&#xff1a;</p> 
+<pre><code class="prism language-bash">tony&#64;tony-virtual-machine:~$ <span class="token builtin class-name">echo</span> <span class="token string">&#34;hello world&#34;</span> <span class="token operator">|</span> <span class="token function">nc</span> localhost <span class="token number">8888</span>
+hello world
+
+</code></pre> 
+<p>客户端数据回显正确&#xff0c;看看服务器接日志信息打印如下&#xff1a;</p> 
+<pre><code class="prism language-bash">root&#64;tony-virtual-machine:/home/tony/code<span class="token comment"># ./a.out </span>
+<span class="token number">20190404</span> 08:00:15.254790Z <span class="token number">42660</span> INFO  pid <span class="token operator">&#61;</span> <span class="token number">42660</span> - main.cpp:61
+<span class="token number">20190404</span> 08:00:59.438626Z <span class="token number">42660</span> INFO  TcpServer::newConnection <span class="token punctuation">[</span>EchoServer<span class="token punctuation">]</span> - new connection <span class="token punctuation">[</span>EchoServer-0.0.0.0:8888<span class="token comment">#1] from 127.0.0.1:33480 - TcpServer.cc:80</span>
+<span class="token number">20190404</span> 08:00:59.438707Z <span class="token number">42660</span> INFO  EchoServer - <span class="token number">127.0</span>.0.1:33480 -<span class="token operator">&gt;</span> <span class="token number">127.0</span>.0.1:8888 is UP - main.cpp:42
+<span class="token number">20190404</span> 08:00:59.438812Z <span class="token number">42660</span> INFO  EchoServer-0.0.0.0:8888<span class="token comment">#1 echo 12 bytes, data received at 1554364859.438723 - main.cpp:53</span>
+
+</code></pre> 
+<p>到此&#xff0c;muduo安装成功&#xff0c;能够正常进行C&#43;&#43;网络程序开发&#xff01;</p>
+                </div>
+                <link href="https://csdnimg.cn/release/blogv2/dist/mdeditor/css/editerView/markdown_views-a5d25dd831.css" rel="stylesheet">
+                <link href="https://csdnimg.cn/release/blogv2/dist/mdeditor/css/style-e504d6a974.css" rel="stylesheet">
+        </div>
+    </article>
+  <script>
+    $(function() {
+      setTimeout(function () {
+        var mathcodeList = document.querySelectorAll('.htmledit_views img.mathcode');
+        if (mathcodeList.length > 0) {
+          for (let i = 0; i < mathcodeList.length; i  ) {
+            if (mathcodeList[i].complete) {
+              if (mathcodeList[i].naturalWidth === 0 || mathcodeList[i].naturalHeight === 0) {
+                var alt = mathcodeList[i].alt;
+                alt = '\\('   alt   '\\)';
+                var curSpan = $('<span class="img-codecogs"></span>');
+                curSpan.text(alt);
+                $(mathcodeList[i]).before(curSpan);
+                $(mathcodeList[i]).remove();
+              }
+            } else {
+              mathcodeList[i].onerror = function() {
+                var alt = mathcodeList[i].alt;
+                alt = '\\('   alt   '\\)';
+                var curSpan = $('<span class="img-codecogs"></span>');
+                curSpan.text(alt);
+                $(mathcodeList[i]).before(curSpan);
+                $(mathcodeList[i]).remove();
+              };
+            }
+          }
+          MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+        }
+      }, 500)
+    });
+  </script>
+</div>
+<div class="directory-boxshadow-dialog" style="display:none;">
+  <div class="directory-boxshadow-dialog-box">
+  </div>
+   <div class="vip-limited-time-offer-box-new" id="vip-limited-time-offer-box-new">
+      <img class="limited-img limited-img-new" src="https://csdnimg.cn/release/blogv2/dist/pc/img/vip-limited-close-newWhite.png">
+      <div class="vip-limited-time-top">
+        确定要放弃本次机会？
+      </div>
+      <span class="vip-limited-time-text">福利倒计时</span>
+      <div class="limited-time-box-new">
+        <span class="time-hour"></span>
+        <i>:</i>
+        <span class="time-minite"></span>
+        <i>:</i>
+        <span class="time-second"></span>
+      </div>
+      <div class="limited-time-vip-box">
+        <p>
+          <img class="coupon-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/vip-limited-close-roup.png">
+          <span class="def">立减 yen</span>
+          <span class="active limited-num"></span>
+        </p>
+        <span class="">普通VIP年卡可用</span>
+      </div>
+      <a class="limited-time-btn-new" href="https://mall.csdn.net/vip" data-report-click='{"spm":"1001.2101.3001.9621"}' data-report-query='spm=1001.2101.3001.9621'>立即使用</a>
+  </div>
+</div>    <div class="more-toolbox-new more-toolbar" id="toolBarBox">
+      <div class="left-toolbox">
+        <div class="toolbox-left">
+            <div class="profile-box">
+              <a class="profile-href" target="_blank" href="https://blog.csdn.net/QIANGWEIYUAN"><img class="profile-img" src="https://profile-avatar.csdnimg.cn/a4a7708a939d45489674a11daeb5d71e_qiangweiyuan.jpg!1">
+                <span class="profile-name">
+                  大秦坑王
+                </span>
+              </a>
+            </div>
+            <div class="profile-attend">
+                <a class="tool-attend tool-bt-button tool-bt-attend" href="javascript:;" data-report-view='{"mod":"1592215036_002","spm":"1001.2101.3001.4232","extend1":"关注"}'>关注</a>
+              <a class="tool-item-follow active-animation" style="display:none;">关注</a>
+            </div>
+        </div>
+        <div class="toolbox-middle">
+          <ul class="toolbox-list">
+            <li class="tool-item tool-item-size tool-active is-like" id="is-like">
+              <a class="tool-item-href">
+                <img style="display:none;" id="is-like-imgactive-animation-like" class="animation-dom active-animation" src="https://csdnimg.cn/release/blogv2/dist/pc/img/tobarThumbUpactive.png" alt="">
+                <img class="isactive" style="display:none" id="is-like-imgactive" src="https://csdnimg.cn/release/blogv2/dist/pc/img/toolbar/like-active.png" alt="">
+                <img class="isdefault" style="display:block" id="is-like-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/toolbar/like.png" alt="">
+                <span id="spanCount" class="count ">
+                    105
+                </span>
+              </a>
+              <div class="tool-hover-tip"><span class="text space">点赞</span></div>
+            </li>
+            <li class="tool-item tool-item-size tool-active is-unlike" id="is-unlike">
+              <a class="tool-item-href">
+                <img class="isactive" style="margin-right:0px;display:none" id="is-unlike-imgactive" src="https://csdnimg.cn/release/blogv2/dist/pc/img/toolbar/unlike-active.png" alt="">
+                <img class="isdefault" style="margin-right:0px;display:block" id="is-unlike-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/toolbar/unlike.png" alt="">
+                <span id="unlikeCount" class="count "></span>
+              </a>
+              <div class="tool-hover-tip"><span class="text space">踩</span></div>
+            </li>
+            <li class="tool-item tool-item-size tool-active is-collection ">
+              <a class="tool-item-href" href="javascript:;" data-report-click='{"mod":"popu_824","spm":"1001.2101.3001.4130","ab":"new"}'>
+                <img style="display:none" id="is-collection-img-collection" class="animation-dom active-animation" src="https://csdnimg.cn/release/blogv2/dist/pc/img/toolbar/collect-active.png" alt="">
+                <img class="isdefault" id="is-collection-img" style="display:block" src="https://csdnimg.cn/release/blogv2/dist/pc/img/toolbar/collect.png" alt="">
+                <img class="isactive" id="is-collection-imgactive" style="display:none" src="https://csdnimg.cn/release/blogv2/dist/pc/img/newCollectActive.png" alt="">
+                <span class="count get-collection " data-num="286" id="get-collection">
+                    286
+                </span>
+              </a>
+              <div class="tool-hover-tip collect">
+                <div class="collect-operate-box">
+                  <span class="collect-text" id="is-collection">
+                    收藏
+                  </span>
+                </div>
+              </div>
+              <div class="tool-active-list">
+                <div class="text">
+                  觉得还不错?
+                  <span class="collect-text" id="tool-active-list-collection">
+                    一键收藏
+                  </span>
+                 <img id="tool-active-list-close" src="https://csdnimg.cn/release/blogv2/dist/pc/img/collectionCloseWhite.png" alt="">
+                </div>
+              </div>
+            </li>
+            <li class="tool-item tool-item-size tool-active tool-item-comment">
+              <div class="guide-rr-first">
+                <img src="https://csdnimg.cn/release/blogv2/dist/pc/img/guideRedReward01.png" alt="">
+                <button class="btn-guide-known">知道了</button>
+              </div>
+                <a class="tool-item-href go-side-comment" data-report-click='{"spm":"1001.2101.3001.7009"}'>
+                <img class="isdefault" src="https://csdnimg.cn/release/blogv2/dist/pc/img/toolbar/comment.png" alt="">
+                <span class="count">
+                    70
+                </span>
+              </a>
+              <div class="tool-hover-tip"><span class="text space">评论</span></div>
+            </li>
+            <li class="tool-item tool-item-size tool-active tool-QRcode" data-type="article" id="tool-share">
+              <a class="tool-item-href" href="javascript:;" data-report-view='{"spm":"3001.4129","extra":{"type":"blogdetail"}}'>
+                <img class="isdefault" src="https://csdnimg.cn/release/blogv2/dist/pc/img/toolbar/share.png" alt="">
+                <span class="count">分享</span>
+              </a>
+                <div class="QRcode active" id="tool-QRcode">
+                <div class="share-bg-box">
+                  <div class="share-content">
+                    <a id="copyPosterUrl" data-type="link" class="btn-share">复制链接</a>
+                  </div>
+                  <div class="share-content">
+                    <a class="btn-share" data-type="qq">分享到 QQ</a>
+                  </div>
+                  <div class="share-content">
+                    <a class="btn-share" data-type="weibo">分享到新浪微博</a>
+                  </div>
+                  <div class="share-code">
+                    <div class="share-code-box" id='shareCode'></div>
+                    <div class="share-code-text">
+                      <img src="https://csdnimg.cn/release/blogv2/dist/pc/img/share/icon-wechat.png" alt="">扫一扫
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          <li class="tool-item tool-item-size tool-active is-more" id="is-more">
+            <a class="tool-item-href">
+              <img class="isdefault" style="margin-right:0px;display:block" src="https://csdnimg.cn/release/blogv2/dist/pc/img/toolbar/more.png" alt="">
+              <span class="count"></span>
+            </a>
+            <div class="more-opt-box">
+              <div class="mini-box">
+                <a class="tool-item-href" id="toolReportBtnHide">
+                  <img class="isdefault" src="https://csdnimg.cn/release/blogv2/dist/pc/img/toolbar/report.png" alt="">
+                  <span class="count">举报</span>
+                </a>
+              </div>
+              <div class="normal-box">
+                <a class="tool-item-href" id="toolReportBtnHideNormal">
+                  <img class="isdefault" src="https://csdnimg.cn/release/blogv2/dist/pc/img/toolbar/report.png" alt="">
+                  <span class="count">举报</span>
+                </a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="toolbox-right"><script type="text/javascript" crossorigin src="https://g.csdnimg.cn/common/csdn-login-box/csdn-login-box.js"></script></html>
