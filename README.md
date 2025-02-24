@@ -14,7 +14,7 @@
   5. `./configure`
   6. `make`
   7. `sudo make install`
-  8. 刷新动态库`sudo Idconfig`
+  8. 刷新动态库`sudo ldconfig`
 - 安装`zookeeper`
   1. `cd conf`
   2. `vim zoo.cfg`
@@ -23,3 +23,4 @@
   5. `./zkServer.sh start`
   6. `ps -ef | grep zookeeper`
    > zookeeper是java开发的，需要有java的环境：`sudo apt update`、`sudo apt install openjdk-11-jdk`
+   > Linux: `sudo apt-get install libzookeeper-mt-dev`
